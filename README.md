@@ -5,7 +5,7 @@ Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
 Microsoft.EntityFrameworkCore.SqlServer
 Microsoft.EntityFrameworkCore.Tools
 
-Se creo el la tabla(Modelo) BSIdeCard en el que se tienen los datos
+Se creo el la tabla(Modelo) BSideCard en el que se tienen los datos
 Nombre
 Numeracion
 CVV
