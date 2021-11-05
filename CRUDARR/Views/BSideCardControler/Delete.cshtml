@@ -1,0 +1,64 @@
+﻿<!--Archivo vista para eliminar datos-->
+
+@model CRUDARR.Models.BSideCard
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="container">    <!--Crea contenedor para ver datos a borrar-->
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Eliminar tarjeta</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-10">
+            <form method="post" asp-action="DeleteTarjeta">
+
+                <input type="hidden" asp-for="Id" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="NombreTitular" class="control-label"></label>
+                    <input asp-for="NombreTitular" class="form-control" disabled />
+                    <span asp-validation-for="NombreTitular" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Numeracion" class="control-label"></label>
+                    <input asp-for="Numeracion" class="form-control" disabled />
+                    <span asp-validation-for="Numeracion" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CVV" class="control-label"></label>
+                    <input asp-for="CVV" class="form-control" disabled />
+                    <span asp-validation-for="CVV" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FechaVencimiento" class="control-label"></label>
+                    <input asp-for="FechaVencimiento" class="form-control" disabled />
+                    <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Eliminar Tarjeta" class="btn btn-primary" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    };
+}
